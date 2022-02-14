@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.techtown.BT_SendNumber">
+
+
+    // 프로젝트 버전 19로 다운시켜 디바이스 버전에 맞춘 후 상위 버전 라이브러리 재정의
+    <uses-sdk tools:overrideLibrary="androidx.constraintlayout.compose,
+    androidx.compose.foundation,
+    androidx.compose.animation,androidx.compose.foundation.layout
+androidx.compose.ui,androidx.compose.foundation.layout,androidx.compose.ui,
+androidx.compose.animation.core,
+androidx.compose.ui.text,androidx.compose.ui.graphics
+androidx.compose.ui.unit,androidx.compose.ui.graphics,androidx.compose.ui.unit,
+androidx.compose.ui.geometry,
+androidx.compose.ui.util,androidx.compose.runtime.saveable
+,androidx.compose.runtime"></uses-sdk>
+
+
+    <!--블루투스 관련-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:label="Module Controller"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="org.techtown.BT_SendNumber.MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
